@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://clylyavy0r3i3"]
+
+[ext_resource type="Texture2D" uid="uid://bmmny2j84co2o" path="res://img/sprites.png" id="1_klupn"]
+
+[node name="spritesheet" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_klupn")
+centered = false
+hframes = 4
+vframes = 3
+frame = 2

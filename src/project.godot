@@ -10,9 +10,36 @@ config_version=5
 
 [application]
 
-config/name="hambaguette"
+config/name="Ham Baguette"
+run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="res://icon.png"
+config/icon="res://icon.png"
+
+[autoload]
+
+global="*res://scripts/global.gd"
+keys="*res://scripts/keys.gd"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=576
+window/size/resizable=false
+window/stretch/scale=4.0
+
+[input]
+
+jh_w={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"echo":false,"script":null)
+]
+}
+jh_l={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":76,"key_label":0,"unicode":108,"echo":false,"script":null)
+]
+}
 
 [rendering]
 

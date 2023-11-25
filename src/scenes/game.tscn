@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjrmvovrk5w17"]
+
+[ext_resource type="Texture2D" uid="uid://behkc123fqnnh" path="res://img/background.png" id="1_5msm5"]
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_q3o0a"]
+[ext_resource type="Texture2D" uid="uid://bbn4ba1em6bd6" path="res://img/gameover.png" id="2_k1rvd"]
+[ext_resource type="AudioStream" uid="uid://dvmxqvr02xap7" path="res://snd/death.wav" id="4_twn26"]
+[ext_resource type="AudioStream" uid="uid://cbcygljdr8ajw" path="res://snd/pickup.wav" id="5_1qdw5"]
+[ext_resource type="FontFile" uid="uid://chq03d63ryg8f" path="res://font/PIXEARG_.TTF" id="6_rh34v"]
+
+[node name="game" type="Node"]
+script = ExtResource("1_q3o0a")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_5msm5")
+centered = false
+
+[node name="Gameover" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+texture_filter = 1
+position = Vector2(113, 50)
+texture = ExtResource("2_k1rvd")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_twn26")
+volume_db = -2.228
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_1qdw5")
+
+[node name="PointsLabel" type="Label" parent="."]
+texture_filter = 1
+offset_left = 16.0
+offset_right = 149.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("6_rh34v")
+theme_override_font_sizes/font_size = 7
+text = "POINTS: 0"
+vertical_alignment = 1
