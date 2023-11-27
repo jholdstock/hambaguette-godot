@@ -1,8 +1,8 @@
-#! /bin/bash
+#! /usr/bin/env bash
 
 set -e
 
-./install_godot.sh
+./bin/install_godot.sh
 
 ./godot ./src/project.godot </dev/null &>/dev/null &
 
